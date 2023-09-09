@@ -1,4 +1,4 @@
-% Cormen
+# Cormen
 
 Some of Thomas H. Cormen's Introduction to Algorithms. 
 
