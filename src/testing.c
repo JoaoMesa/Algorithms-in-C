@@ -1,10 +1,10 @@
+#include "Sorting/Sorting.h"
 #include <stdio.h>
-#include "SortingAlgorithms/Sorting.h"
 #define SIZE 10
 
 void fillvector(int vector[]){
 	for(int i = 0; i < SIZE; i++){
-		vector[i] = 9-i;
+		vector[i] = 10-i;
 	}
 }
 
@@ -12,8 +12,8 @@ void printvector(int vector[]){
 	for(int i = 0; i < SIZE; i++){
 		printf("%d ", vector[i]);
 	}
+	printf("\n");
 }
-
 
 int main(){
 	int vetorselection[SIZE];
@@ -21,8 +21,11 @@ int main(){
 	
 	selectionsort(vetorselection, SIZE);
 
+	printf("SelectionSort: ");
 	printvector(vetorselection);
 	
 	return 0;
 }
+
+
 
