@@ -29,6 +29,10 @@ int main(){
 	printf("InsertioSort: ");
 	printvector(vector);
 
+	fillvector(vector);
+	bubblesort(vector, SIZE);
+	printf("BubbleSort: ");
+	printvector(vector);
 	
 	return 0;
 }
