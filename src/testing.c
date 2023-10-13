@@ -1,10 +1,12 @@
 #include "Sorting/Sorting.h"
 #include <stdio.h>
+#include <stdlib.h>
 #define SIZE 10
 
 void fillvector(int vector[]){
 	for(int i = 0; i < SIZE; i++){
-		vector[i] = 10-i;
+		int r = rand() % 50;
+		vector[i] = r;
 	}
 }
 
@@ -16,13 +18,17 @@ void printvector(int vector[]){
 }
 
 int main(){
-	int vetorselection[SIZE];
-	fillvector(vetorselection);
-	
-	selectionsort(vetorselection, SIZE);
-
+	int vector[SIZE];
+	fillvector(vector);
+	selectionsort(vector, SIZE);
 	printf("SelectionSort: ");
-	printvector(vetorselection);
+	printvector(vector);
+
+	fillvector(vector);
+	insertionsort(vector, SIZE);
+	printf("InsertioSort: ");
+	printvector(vector);
+
 	
 	return 0;
 }
